@@ -50,5 +50,14 @@ int main() {
             << val_sum
             << std::endl;
 
+#if AS_ALLOW_REDUCE__
+  auto reduced = std::reduce(val.begin(),
+                             val.end());
+  std::cout << "The sum of numbers 1-100 (reduce)     is "
+            << reduced
+            << std::endl;
+#endif
+
   return 0;
 }
+
